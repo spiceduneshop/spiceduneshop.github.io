@@ -28,11 +28,17 @@
       max-width: 1200px;
       margin: auto;
       padding: 40px 20px;
+    }
+
+    /* ===== CAROUSEL GRID ===== */
+    
+    
+    .chips {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 30px;
     }
-
+    
     h1, h2, h3 {
       margin-top: 0;
     }
@@ -161,15 +167,16 @@
 <body>
 
   <div class="container">
-
-    <!-- LEFT COLUMN -->
-    <div class="left">
-      <div class="brand">
+    <div class="brand">
         <!-- Optional logo -->
         <!-- <img src="logo.png" alt="Logo" width="60"> -->
         <h1>Spice Dune</h1>
         <span>A Cook’s Secret</span>
       </div>
+    <div class="chips">
+    <!-- LEFT COLUMN -->
+    <div class="left">
+      
       <div class="ar-card">
       <h1>THE AROMATIC<br>WORLD OF SPICES</h1>
       <div class="subtitle">PURE | AUTHENTIC | HANDPICKED</div>
@@ -232,7 +239,7 @@
         </div>
       </div>
     </div>
-
+    </div>
     <!-- CONTACT -->
     <div class="contact">
       <h2>CONTACT US NOW</h2>
