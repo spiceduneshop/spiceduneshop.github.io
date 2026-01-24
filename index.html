@@ -114,3 +114,132 @@
     /* ===== CONTACT ===== */
     .contact {
       grid-column: 1 / -1;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .contact h2 {
+      margin-bottom: 20px;
+      border-bottom: 2px solid var(--brown);
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .contact-item {
+      margin: 8px 0;
+    }
+
+    /* ===== CTA ===== */
+    .cta {
+      grid-column: 3;
+      margin-top: 20px;
+      text-align: right;
+      font-weight: 600;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+
+      .cta {
+        grid-column: 1;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- LEFT COLUMN -->
+    <div class="left">
+      <h1>THE AROMATIC<br>WORLD OF SPICES</h1>
+      <div class="subtitle">PURE | AUTHENTIC | HANDPICKED</div>
+
+      <p>
+        We select the <strong>PREMIUM & Grade-I SPICES</strong> from farmers in
+        <strong>FINEST REGIONS</strong> of India and process them carefully to
+        retain natural oils, aroma, and potency.
+      </p>
+
+      <div class="card">
+        <div class="section-title">OUR COLLECTIONS</div>
+
+        <h3>WHOLE SPICES</h3>
+        <p>
+          Cardamom, Black Peppercorns, Cinnamon sticks, Cloves,
+          Star Anise, Mace, Bay leaf, Red Chilli, Turmeric roots,
+          Cumin seeds, Coriander seeds and more.
+        </p>
+
+        <h3>BEYOND SPICES</h3>
+        <p>
+          Spice mix powders, ready-to-use blends, premium rice and nuts
+          crafted for authentic flavour and freshness.
+        </p>
+      </div>
+    </div>
+
+    <!-- CENTER COLUMN -->
+    <div class="center">
+      <div class="brand">
+        <!-- Optional logo -->
+        <!-- <img src="logo.png" alt="Logo" width="60"> -->
+        <h1>Spice Dune</h1>
+        <span>A Cook’s Secret</span>
+      </div>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="right">
+      <div class="card">
+        <h2>WHY CHOOSE US?</h2>
+
+        <div class="feature">
+          <strong>Uncompromising Quality</strong>
+          We sell only Grade-1 export quality spices with 100% freshness.
+        </div>
+
+        <div class="feature">
+          <strong>Zero Adulteration</strong>
+          Pure spices with no artificial additives, sourced directly.
+        </div>
+
+        <div class="feature">
+          <strong>Customizable</strong>
+          Tailored quantities and customized grinding for freshness.
+        </div>
+
+        <div class="feature">
+          <strong>Value for Money</strong>
+          Premium quality at wholesale prices.
+        </div>
+
+        <div class="feature">
+          <strong>Feel and Buy</strong>
+          Free samples to explore flavours and recipes.
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="contact">
+      <h2>CONTACT US NOW</h2>
+      <div class="contact-item">📞 +91 96773 34544</div>
+      <div class="contact-item">🌐 www.xyz.spicedune.com</div>
+      <div class="contact-item">📍 G10B, Ozone Greens, Chennai</div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta">
+      VISIT OUR STORE OR WHATSAPP TO EMBARK ON OUR FLAVOURFUL JOURNEY
+    </div>
+
+  </div>
+
+</body>
+</html>
