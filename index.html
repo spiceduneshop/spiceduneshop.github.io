@@ -135,6 +135,27 @@
     place-items: center;
   }
 
+  .product {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 15px;
+    margin-bottom: 25px;
+  }
+
+  .product img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .product strong {
+    display: block;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
   /* ===== RESPONSIVE ===== */
   @media (max-width: 900px) {
     .grid {
@@ -228,6 +249,56 @@
         <strong>Feel and Buy</strong>
         Free samples and recipe guidance.
       </div>
+    </div>
+  </section>
+
+  <section class="left">
+    <div class="card">
+    <div class="product">
+        <img src="images/cardamom.jpg">
+        <div>
+          <strong>Cardamom</strong>
+          Known as the “Queen of Spices”, bold, fragrant and rich in essential oils.
+          <div class="source">Sourced: Kerala</div>
+        </div>
+      </div>
+
+      <div class="product">
+        <img src="images/star-anise.jpg">
+        <div>
+          <strong>Star Anise</strong>
+          Sweet licorice-like aroma adding depth to savory and sweet dishes.
+          <div class="source">Sourced: Kerala</div>
+        </div>
+      </div>
+
+      <div class="product">
+        <img src="images/cinnamon.jpg">
+        <div>
+          <strong>Cinnamon</strong>
+          Rich, woody flavour enhancing desserts and savory dishes.
+          <div class="source">Sourced: Kerala</div>
+        </div>
+      </div>
+
+      <div class="product">
+        <img src="images/clove.jpg">
+        <div>
+          <strong>Clove</strong>
+          High eugenol content gives strong aroma and medicinal value.
+          <div class="source">Sourced: Kerala / Kanniyakumari</div>
+        </div>
+      </div>
+
+      <div class="product">
+        <img src="images/bayleaf.jpg">
+        <div>
+          <strong>Bay Leaf</strong>
+          Subtle herbal depth for curries, soups and rice dishes.
+          <div class="source">Sourced: Meghalaya, West Bengal</div>
+        </div>
+      </div>
+    </div>
     </div>
   </section>
 
