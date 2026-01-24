@@ -104,7 +104,7 @@
 
   /* ===== CONTACT (COLSPAN 3) ===== */
   .contact {
-    grid-column: 1 / -1; /* FULL WIDTH */
+    grid-column: span 1; /* FULL WIDTH */
     text-align: center;
     margin-top: 20px;
   }
@@ -123,6 +123,14 @@
   /* ===== CTA (COLSPAN 2, RIGHT SIDE) ===== */
   .cta {
     grid-column: 2 / span 2; /* like colspan="2" */
+    text-align: right;
+    font-weight: 600;
+    margin-top: 20px;
+  }
+
+   /* ===== CTA (COLSPAN 2, RIGHT SIDE) ===== */
+  .logo {
+    grid-column: 3 / span 3; /* like colspan="2" */
     text-align: right;
     font-weight: 600;
     margin-top: 20px;
@@ -152,9 +160,15 @@
 <body>
 
 <div class="grid">
-
+  <section class="logo">
+    <div>
+      <h1>Spice Dune</h1>
+      <span>A Cook’s Secret</span>
+    </div>
+  </section>
   <!-- LEFT -->
   <section class="left">
+    <div class="card">
     <h1>THE AROMATIC<br>WORLD OF SPICES</h1>
     <div class="subtitle">PURE | AUTHENTIC | HANDPICKED</div>
 
@@ -163,7 +177,11 @@
       <strong>FINEST REGIONS</strong> of India and process them carefully
       to retain natural oils and aroma.
     </p>
+    </div>
+  </section>
 
+  <!-- CENTER -->
+  <section class="center">
     <div class="card">
       <div class="section-title">OUR COLLECTIONS</div>
 
@@ -179,14 +197,6 @@
         Ready-to-use spice mixes, premium rice and nuts crafted
         for authentic flavour and freshness.
       </p>
-    </div>
-  </section>
-
-  <!-- CENTER -->
-  <section class="center">
-    <div>
-      <h1>Spice Dune</h1>
-      <span>A Cook’s Secret</span>
     </div>
   </section>
 
