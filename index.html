@@ -1,10 +1,116 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>My GitHub Site</title>
-  </head>
-  <body>
-    <h1>Hello world 👋</h1>
-    <p>This site is hosted on GitHub Pages.</p>
-  </body>
-</html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Spice Dune</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    :root {
+      --bg: #fdf0e6;
+      --brown: #4b2412;
+      --card: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--brown);
+    }
+
+    /* ===== MAIN GRID ===== */
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 30px;
+    }
+
+    h1, h2, h3 {
+      margin-top: 0;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    /* ===== LEFT COLUMN ===== */
+    .left h1 {
+      font-size: 32px;
+      letter-spacing: 1px;
+    }
+
+    .subtitle {
+      margin: 10px 0 20px;
+      font-weight: 600;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 24px;
+      padding: 25px;
+      margin-top: 20px;
+    }
+
+    .section-title {
+      font-weight: bold;
+      margin-bottom: 10px;
+      border-bottom: 2px solid var(--brown);
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    /* ===== CENTER BRAND ===== */
+    .center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .brand {
+      background: var(--brown);
+      color: white;
+      width: 100%;
+      height: 380px;
+      border-radius: 0 0 300px 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .brand h1 {
+      font-size: 48px;
+      margin: 10px 0;
+    }
+
+    .brand span {
+      font-style: italic;
+      opacity: 0.9;
+    }
+
+    /* ===== RIGHT COLUMN ===== */
+    .right .card h2 {
+      margin-bottom: 20px;
+    }
+
+    .feature {
+      margin-bottom: 18px;
+    }
+
+    .feature strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    /* ===== CONTACT ===== */
+    .contact {
+      grid-column: 1 / -1;
