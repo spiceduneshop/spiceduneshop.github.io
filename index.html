@@ -151,7 +151,7 @@
 
   .product strong {
     display: block;
-    margin-bottom: 6px;
+    /*margin-bottom: 6px;*/
     text-transform: uppercase;
     color: var(--accent);
   }
@@ -177,6 +177,17 @@
     margin-top: 30px;
     font-weight: bold;
     text-align: center;
+  }
+
+  .source {
+    font-style: italic;
+    color: var(--accent);
+    margin-top: 4px;
+  }
+
+  .lang {
+    font-style: italic;
+    color: var(--accent);
   }
 
   /* ===== RESPONSIVE ===== */
@@ -280,8 +291,8 @@
     <div class="product">
         <img src="images/cardamom.jpg">
         <div>
-          <strong>Cardamom</strong><i>(Elakkai/Yelakulu/Elaichi)</i>
-          Known as the “Queen of Spices”, bold, fragrant and rich in essential oils.
+          <strong>Cardamom</strong><div class="lang">(Elakkai/Yelakulu/Elaichi)</div>
+          <div>Known as the “Queen of Spices”, bold, fragrant and rich in essential oils.</div>
           <div class="source">Sourced: Kerala</div>
         </div>
       </div>
