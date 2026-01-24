@@ -1,1 +1,10 @@
-# spiceduneshop.github.io
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My GitHub Site</title>
+  </head>
+  <body>
+    <h1>Hello world 👋</h1>
+    <p>This site is hosted on GitHub Pages.</p>
+  </body>
+</html>
