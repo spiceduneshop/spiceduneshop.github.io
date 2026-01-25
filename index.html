@@ -113,14 +113,6 @@
     margin: 8px 0;
   }
 
-  /* ===== CTA (COLSPAN 2, RIGHT SIDE) ===== */
-  .cta {
-    grid-column: 2 / span 2; /* like colspan="2" */
-    text-align: right;
-    font-weight: 600;
-    margin-top: 20px;
-  }
-
    /* ===== CTA (COLSPAN 2, RIGHT SIDE) ===== */
   .logo {
     grid-column: span 3; /* like colspan="2" */
@@ -201,6 +193,11 @@
 
   .notes {
     font-size: small;
+  }
+
+  .notes-o {
+    font-size: small;
+    margin-bottom: 5px;
   }
 
   /* ===== RESPONSIVE ===== */
@@ -417,23 +414,36 @@
       </div>
     </div>
   </section>
-  <section class="left">
+
+<section class="left">
+    <div class="card">
+      <div class="product">
+        <img src="images/rice.jpg">
+        <div>
+          <strong>Premium Rice</strong>
+          Parboiled, classic idly rice and raw rice.
+          <div class="source">Sourced: Arani, Tamil Nadu</div>
+        </div>
+      </div>
+    </div>
+</section>
+  <section class="center">
     <div class="card">
     <h3>Our other Products</h3>
-      <div class="notes">Mustard <i>(Kadugu/Aavalu/Sarson)</i></div>
-      <div class="notes">Marathi Moggu</div>
-      <div class="notes">Cumin <i>(Seeragam/Jilakara/Jeera)</i></div>
-      <div class="notes">Fennel <i>(Perunjeeragam/Sompu/Saunf)</i></div>
-      <div class="notes">Fenugreek <i>(Vendhayam/Menthulu/Methi seeds)</i></div>
-      <div class="notes">Asafoetida <i>(Perungayam/Inguva/Hing)</i></div>
-      <div class="notes">And much more......</div>
+      <div class="notes-o">Mustard <i>(Kadugu/Aavalu/Sarson)</i></div>
+      <div class="notes-o">Marathi Moggu</div>
+      <div class="notes-o">Cumin <i>(Seeragam/Jilakara/Jeera)</i></div>
+      <div class="notes-o">Fennel <i>(Perunjeeragam/Sompu/Saunf)</i></div>
+      <div class="notes-o">Fenugreek <i>(Vendhayam/Menthulu/Methi seeds)</i></div>
+      <div class="notes-o">Asafoetida <i>(Perungayam/Inguva/Hing)</i></div>
+      <div class="notes-o">And much more......</div>
 
       <h3>Customized spice powders</h3>
-      <div class="notes">Chilli Powder</div>
-      <div class="notes">Turmeric Powder</div>
-      <div class="notes">Coriander Powder</div>
-      <div class="notes">Pepper Powder</div>
-      <div class="notes">Garam Masala</div>
+      <div class="notes-o">Chilli Powder</div>
+      <div class="notes-o">Turmeric Powder</div>
+      <div class="notes-o">Coriander Powder</div>
+      <div class="notes-o">Pepper Powder</div>
+      <div class="notes-o">Garam Masala</div>
     </div>
   </section>
     
@@ -443,11 +453,7 @@
     <div>📞 whatsapp +91 96773 34544</div>
     <div>🌐 https://spiceduneshop.github.io</div>
     <div>📍 G10B, Ozone Greens, Chennai</div>
-  </section>
-
-  <!-- CTA (COLSPAN 2) -->
-  <section class="cta">
-    VISIT OUR STORE OR WHATSAPP TO EMBARK ON OUR FLAVOURFUL JOURNEY
+    <div>VISIT OUR STORE OR WHATSAPP TO EMBARK ON OUR FLAVOURFUL JOURNEY</div>
   </section>
 
 </div>
