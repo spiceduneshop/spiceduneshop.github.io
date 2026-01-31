@@ -7,7 +7,8 @@
 
 <style>
   :root {
-    --bg: #F3E6C8;
+    /*--bg: #F3E6C8;*/
+    --bg: #FBF6EA;
     /*--bg-brown: #fdf0e6;*/
     --brown: #4b2412;
     --grey: #3E3B3C;
@@ -29,15 +30,72 @@
   .grid {
     max-width: 1200px;
     margin: auto;
-    padding: 40px 20px;
+    padding: 0px 20px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: auto;
     gap: 30px;
   }
 
+  .header {
+    grid-column: span 3;
+    max-width: 1200px;
+    /*margin: auto;*/
+    /*padding: 0px 20px;*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    gap: 50px;
+  }
+
+  .logo {
+    grid-column: 1;
+  }
+
+  .tag {
+    grid-column: span 2;
+    text-align: end;
+  }
+
+  .footer {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0px 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    gap: 50px;
+  }
+
+  .catalogue-grid {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0px 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    gap: 50px;
+  }
+
+  .catalogue-left {
+    grid-column: 1;
+    border-right: 1px solid #bbb;
+    padding-right: 30px;
+  }
+
+  .catalogue-center {
+    grid-column: 2;
+    border-right: 1px solid #bbb;
+    padding-right: 30px;
+  }
+
+  .catalogue-right {
+    grid-column: 3;
+  }
+
   h1, h2, h3 {
-    margin-top: 0;
+    margin-top: 20px;
+    margin-bottom: 0px;
   }
 
   p {
@@ -46,7 +104,7 @@
 
   /* ===== LEFT COLUMN ===== */
   .left {
-    grid-column: span 1;
+    grid-column: 1;
   }
 
   .subtitle {
@@ -58,6 +116,14 @@
     background: var(--card);
     border-radius: 24px;
     padding: 25px;
+    /*margin-top: 20px;*/
+  }
+
+  .catalogue {
+    background: var(--card);
+    border-radius: 24px;
+    padding: 25px;
+    grid-column: span 3;
     /*margin-top: 20px;*/
   }
 
@@ -119,12 +185,29 @@
 
   .product {
     display: grid;
-    grid-template-columns: 60px 1fr;
+    /*grid-template-columns: 60px 1fr;*/
+    /*grid-template-columns: repeat(12, 1fr);*/
     gap: 15px;
     margin-bottom: 25px;
   }
 
-  .product img {
+  .product1 {
+    grid-template-columns: 60px 1fr;
+  }
+
+  .product1 img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .product2 {
+    grid-template-columns: 1fr 60px;
+    text-align: left;
+  }
+
+  .product2 img {
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -190,7 +273,7 @@
     margin-bottom: 5px;
   }
 
-  .logo {
+  .spices {
     grid-column: span 3; /* like colspan="2" */
     height: 500px;
     width: 100%;
@@ -341,15 +424,19 @@ input#slide3:checked ~ .navigation label[for="slide3"] {
 <body>
 
 <div class="grid">
-  <section class="logo">
+  <section class="header">
+    <div class="logo"><img src="logo.jpg" style="width: 300px;" alt=""></div>
+    <div class="tag"><h1>THE AROMATIC WORLD OF SPICES</h1>PURE | AUTHENTIC | HANDPICKED</div>
+  </section>
+  <section class="spices">
     <div class="carousel">
       <div class="slides">
-        <div class="slide"><img src="logo.jpg" alt=""></div>
+        <div class="slide"><img src="turmeric.jpg" alt=""></div>
         <div class="slide"><img src="anis.jpg" alt=""></div>
         <div class="slide"><img src="bayleaf.jpg" alt=""></div>
       </div>
     
-      <div class="dpts">
+      <div class="dots">
         <span class="dot active"></span>
         <span class="dot"></span>
         <span class="dot"></span>
@@ -358,193 +445,171 @@ input#slide3:checked ~ .navigation label[for="slide3"] {
     
   </section>
   <!-- LEFT -->
+  <section class="catalogue">
+    <div class="catalogue-grid">
+      <div class="catalogue-left">
+        <p>
+          We select the <strong>PREMIUM & Grade-I SPICES</strong> from the
+          <strong>FINEST REGIONS</strong> of India and process them carefully
+          to retain natural oils and aroma.
+        </p>
+      </div>
+      <div class="catalogue-center">
+        <div class="section-title">OUR COLLECTIONS</div>
+
+        <h3>WHOLE SPICES</h3>
+        <p>
+          Cardamom, Black Peppercorns, Cinnamon sticks, Cloves,
+          Star Anise, Mace, Bay leaf, Red Chilli, Turmeric roots,
+          Cumin seeds, Coriander seeds and more.
+        </p>
+
+        <h3>BEYOND SPICES</h3>
+        <p>
+          Ready-to-use spice mixes, premium rice and nuts crafted
+          for authentic flavour and freshness.
+        </p>
+      </div>
+      <div class="catalogue-right">
+        <h2>WHY US?</h2>
+
+        <div class="feature">
+          <strong>Uncompromising Quality</strong>
+          Grade-1 export quality spices with 100% freshness.
+        </div>
+
+        <div class="feature">
+          <strong>Zero Adulteration</strong>
+          No artificial additives, sourced directly.
+        </div>
+
+        <div class="feature">
+          <strong>Customizable</strong>
+          Tailored quantities and grinding.
+        </div>
+
+        <div class="feature">
+          <strong>Value for Money</strong>
+          Premium quality at wholesale prices.
+        </div>
+
+        <div class="feature">
+          <strong>Feel and Buy</strong>
+          Free samples and recipe guidance.
+        </div>
+      </div>
+    </div>
+  </section>
+   
+  <section class="catalogue">
+    <div class="catalogue-grid">
+      <div class="catalogue-left">
+        <div class="product product1">
+          <img src="cardamom.jpg">
+          <div>
+            <strong>Cardamom</strong><div class="lang">(Elakkai/Yelakalu/Elaichi)</div>
+            <div class="notes">Known as the “Queen of Spices”, bold, fragrant and rich in essential oils.</div>
+            <div class="source">Sourced: Kerala</div>
+          </div>
+        </div>
+        <div class="product product2">
+          <div>
+            <strong>Star Anise</strong><div class="lang">(Chakra phool)</div>
+            <div class="notes">Sweet licorice-like aroma adding depth to savory and sweet dishes.</div>
+            <div class="source">Sourced: Kerala</div>
+          </div>
+          <img src="anis.jpg">
+        </div>
+        <div class="product product1">
+          <img src="cinnamon.jpg">
+          <div>
+            <strong>Cinnamon</strong><div class="lang">(Pattai/Dalchini)</div>
+            <div class="notes">Rich, woody flavour enhancing desserts and savory dishes.</div>
+            <div class="source">Sourced: Kerala</div>
+          </div>
+        </div>
+        <div class="product product2">
+          <div>
+            <strong>Clove</strong><div class="lang">(Krambu/Lavangam/Laung)</div>
+            <div class="notes">High eugenol content gives strong aroma and medicinal value.</div>
+            <div class="source">Sourced: Kerala / Kanniyakumari</div>
+          </div>
+          <img src="clove.jpg">
+        </div>
+      </div>
+      <div class="catalogue-center">
+        <div class="product product1">
+          <img src="bayleaf.jpg">
+          <div>
+            <strong>Bay Leaf</strong><div class="lang">(Brinji Ilai/Tej Patta)</div>
+            <div class="notes">Subtle herbal depth for curries, soups and rice dishes.</div>
+            <div class="source">Sourced: Meghalaya, West Bengal</div>
+          </div>
+        </div>
+        <div class="product product2">
+          <div>
+            <strong>Mace Flower</strong><div class="lang">(Japatri/Javitri)</div>
+            <div class="notes">Delicate aromatic covering of nutmeg with warm, spicy notes.</div>
+            <div class="source">Sourced: Nilgiris, Kerala</div>
+          </div>
+          <img src="mace.jpg">
+        </div>
+        <div class="product product1">
+          <img src="pepper.jpg">
+          <div>
+            <strong>Black Pepper</strong><div class="lang">(Milagu/Miriyalu/Kali Mirch)</div>
+            <div class="notes">Extra sharp aroma and intense heat for taste and nutrition.</div>
+            <div class="source">Sourced: Kerala</div>
+          </div>
+        </div>
+        <div class="product product2">
+          <div>
+            <strong>Coriander Seeds</strong><div class="lang">(Malli/Sabut Dhaniya)</div>
+            <div class="notes">Mildly sweet, citrusy backbone of Indian cooking.</div>
+            <div class="source">Sourced: Virudhunagar, Thoothukudi</div>
+          </div>
+          <img src="dhaniya.jpg">
+        </div>
+      </div>
+      <div class="catalogue-right">
+        <div class="product product1">
+          <img src="turmeric.jpg">
+          <div>
+            <strong>Turmeric</strong><div class="lang">(Manjal/Pasupu/Haldi)</div>
+            <div class="notes">Sun-dried and stone-ground to preserve curcumin content.</div>
+            <div class="source">Sourced: Telangana, Erode</div>
+          </div>
+        </div>
+        <div class="product product2">
+          <div>
+            <strong>Red Chilli</strong><div class="lang">(Varamilagai/Endu Mirchi/Lal Mirch)</div>
+            <div class="notes">Vibrant colour and balanced heat without additives.</div>
+            <div class="source">Sourced: Guntur</div>
+          </div>
+          <img src="redchilly.jpg">
+        </div>
+        <div class="product product1">
+          <img src="garlic.jpg">
+          <div>
+            <strong>Garlic</strong><div class="lang">(Poondu/Velluli/Lehsun)</div>
+            <div class="notes">Strong savory flavour with medicinal benefits.</div>
+            <div class="source">Sourced: Kodaikanal</div>
+          </div>
+        </div>
+        <div class="product product2">
+          <div>
+            <strong>Tamarind</strong><div class="lang">(Puli/Chinthapandu/Imli)</div>
+            <div class="notes">Deep sourness with natural sweetness, aids digestion.</div>
+            <div class="source">Sourced: Dharmapuri, Tamil Nadu</div>
+          </div>
+          <img src="tamarind.jpg">
+        </div>
+      </div>
+    </div>
+  </section>
   <section class="left">
     <div class="card">
-    <h1>THE AROMATIC<br>WORLD OF SPICES</h1>
-    <div class="subtitle">PURE | AUTHENTIC | HANDPICKED</div>
-
-    <p>
-      We select the <strong>PREMIUM & Grade-I SPICES</strong> from the
-      <strong>FINEST REGIONS</strong> of India and process them carefully
-      to retain natural oils and aroma.
-    </p>
-    </div>
-  </section>
-
-  <!-- CENTER -->
-  <section class="center">
-    <div class="card">
-      <div class="section-title">OUR COLLECTIONS</div>
-
-      <h3>WHOLE SPICES</h3>
-      <p>
-        Cardamom, Black Peppercorns, Cinnamon sticks, Cloves,
-        Star Anise, Mace, Bay leaf, Red Chilli, Turmeric roots,
-        Cumin seeds, Coriander seeds and more.
-      </p>
-
-      <h3>BEYOND SPICES</h3>
-      <p>
-        Ready-to-use spice mixes, premium rice and nuts crafted
-        for authentic flavour and freshness.
-      </p>
-    </div>
-  </section>
-
-  <!-- RIGHT -->
-  <section class="right">
-    <div class="card">
-      <h2>WHY CHOOSE US?</h2>
-
-      <div class="feature">
-        <strong>Uncompromising Quality</strong>
-        Grade-1 export quality spices with 100% freshness.
-      </div>
-
-      <div class="feature">
-        <strong>Zero Adulteration</strong>
-        No artificial additives, sourced directly.
-      </div>
-
-      <div class="feature">
-        <strong>Customizable</strong>
-        Tailored quantities and grinding.
-      </div>
-
-      <div class="feature">
-        <strong>Value for Money</strong>
-        Premium quality at wholesale prices.
-      </div>
-
-      <div class="feature">
-        <strong>Feel and Buy</strong>
-        Free samples and recipe guidance.
-      </div>
-    </div>
-  </section>
-
-  <section class="left">
-    <div class="card">
-    <div class="product">
-        <img src="cardamom.jpg">
-        <div>
-          <strong>Cardamom</strong><div class="lang">(Elakkai/Yelakalu/Elaichi)</div>
-          <div class="notes">Known as the “Queen of Spices”, bold, fragrant and rich in essential oils.</div>
-          <div class="source">Sourced: Kerala</div>
-        </div>
-      </div>
-
-      <div class="product">
-        <img src="anis.jpg">
-        <div>
-          <strong>Star Anise</strong><div class="lang">(Chakra phool)</div>
-          <div class="notes">Sweet licorice-like aroma adding depth to savory and sweet dishes.</div>
-          <div class="source">Sourced: Kerala</div>
-        </div>
-      </div>
-
-      <div class="product">
-        <img src="cinnamon.jpg">
-        <div>
-          <strong>Cinnamon</strong><div class="lang">(Pattai/Dalchini)</div>
-          <div class="notes">Rich, woody flavour enhancing desserts and savory dishes.</div>
-          <div class="source">Sourced: Kerala</div>
-        </div>
-      </div>
-
-      <div class="product">
-        <img src="clove.jpg">
-        <div>
-          <strong>Clove</strong><div class="lang">(Krambu/Lavangam/Laung)</div>
-          <div class="notes">High eugenol content gives strong aroma and medicinal value.</div>
-          <div class="source">Sourced: Kerala / Kanniyakumari</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="center">
-    <div class="card">
-      <div class="product">
-        <img src="bayleaf.jpg">
-        <div>
-          <strong>Bay Leaf</strong><div class="lang">(Brinji Ilai/Tej Patta)</div>
-          <div class="notes">Subtle herbal depth for curries, soups and rice dishes.</div>
-          <div class="source">Sourced: Meghalaya, West Bengal</div>
-        </div>
-      </div>
-  <div class="product">
-      <img src="mace.jpg">
-      <div>
-        <strong>Mace Flower</strong><div class="lang">(Japatri/Javitri)</div>
-        <div class="notes">Delicate aromatic covering of nutmeg with warm, spicy notes.</div>
-        <div class="source">Sourced: Nilgiris, Kerala</div>
-      </div>
-    </div>
-
-    <div class="product">
-      <img src="pepper.jpg">
-      <div>
-        <strong>Black Pepper</strong><div class="lang">(Milagu/Miriyalu/Kali Mirch)</div>
-        <div class="notes">Extra sharp aroma and intense heat for taste and nutrition.</div>
-        <div class="source">Sourced: Kerala</div>
-      </div>
-    </div>
-
-    <div class="product">
-      <img src="dhaniya.jpg">
-      <div>
-        <strong>Coriander Seeds</strong><div class="lang">(Malli/Sabut Dhaniya)</div>
-        <div class="notes">Mildly sweet, citrusy backbone of Indian cooking.</div>
-        <div class="source">Sourced: Virudhunagar, Thoothukudi</div>
-      </div>
-    </div>
-    </div>
-  </section>
-
-  <section class="right">
-    <div class="card">
-       <div class="product">
-      <img src="turmeric.jpg">
-      <div>
-        <strong>Turmeric</strong><div class="lang">(Manjal/Pasupu/Haldi)</div>
-        <div class="notes">Sun-dried and stone-ground to preserve curcumin content.</div>
-        <div class="source">Sourced: Telangana, Erode</div>
-      </div>
-    </div>
-
-    <div class="product">
-      <img src="redchilly.jpg">
-      <div>
-        <strong>Red Chilli</strong><div class="lang">(Varamilagai/Endu Mirchi/Lal Mirch)</div>
-        <div class="notes">Vibrant colour and balanced heat without additives.</div>
-        <div class="source">Sourced: Guntur</div>
-      </div>
-    </div>
-      
-    <div class="product">
-      <img src="garlic.jpg">
-      <div>
-        <strong>Garlic</strong><div class="lang">(Poondu/Velluli/Lehsun)</div>
-        <div class="notes">Strong savory flavour with medicinal benefits.</div>
-        <div class="source">Sourced: Kodaikanal</div>
-      </div>
-    </div>
-      
-      <div class="product">
-        <img src="tamarind.jpg">
-        <div>
-          <strong>Tamarind</strong><div class="lang">(Puli/Chinthapandu/Imli)</div>
-          <div class="notes">Deep sourness with natural sweetness, aids digestion.</div>
-          <div class="source">Sourced: Dharmapuri, Tamil Nadu</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-<section class="left">
-    <div class="card">
-      <div class="product">
+      <div class="product product1">
         <img src="rice1.jpg">
         <div>
           <strong>Premium Rice</strong>
