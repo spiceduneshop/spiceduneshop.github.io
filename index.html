@@ -120,7 +120,18 @@
     padding-right: 30px;
   }
 
-  h1, h2, h3 {
+  h2 {
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
+
+  h1 {
     margin-top: 20px;
     margin-bottom: 0px;
   }
@@ -132,6 +143,8 @@
   /* ===== LEFT COLUMN ===== */
   .left {
     grid-column: 1;
+    /*display: grid;
+    grid-template-columns: repeat(3, 1fr);*/
   }
 
   .subtitle {
@@ -141,7 +154,7 @@
 
   .card {
     background: var(--card);
-    grid-template-columns: repeat(1, 1fr);
+    
     /*border-radius: 24px;*/
     padding: 25px;
     /*margin-top: 20px;*/
@@ -149,6 +162,14 @@
 
   .card img {
     object-fit: contain;
+  }
+
+  .spice-powder {
+    grid-column: 1;
+  }
+
+  .rice {
+    grid-column: 3;
   }
   
   .catalogue {
@@ -203,6 +224,8 @@
   /* ===== RIGHT COLUMN ===== */
   .right {
     grid-column: 3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .feature {
@@ -672,15 +695,29 @@ input#slide3:checked ~ .navigation label[for="slide3"] {
         <img src="spicepowder.png">
       </div>
       <div>
-        <strong>Premium Rice</strong>
-        Parboiled, classic idly rice and raw rice.
-        <div class="source">Sourced: Arani, Tamil Nadu</div>
+        <h3>Customized spice powders</h3>
+        <div class="notes-o">Chilli Powder</div>
+        <div class="notes-o">Turmeric Powder</div>
+        <div class="notes-o">Coriander Powder</div>
+        <div class="notes-o">Pepper Powder</div>
+        <div class="notes-o">Garam Masala</div>
       </div>
     </div>
   </section>
   <section class="center">
+    <img src="whyus.png" style="width: 100%;">
+  </section>
+  <section class="right">
     <div class="card">
-    <h3>Our other Products</h3>
+      <div class="rice">
+        <img src="rice1.jpg">
+      </div>
+      <div>
+        <strong>Premium Rice</strong>
+        Parboiled, classic idly rice and raw rice.
+        <div class="source">Sourced: Arani, Tamil Nadu</div>
+      </div>
+      <h3>Our other Products</h3>
       <div class="notes-o">Mustard <i>(Kadugu/Aavalu/Sarson)</i></div>
       <div class="notes-o">Marathi Moggu</div>
       <div class="notes-o">Cumin <i>(Seeragam/Jilakara/Jeera)</i></div>
@@ -688,60 +725,6 @@ input#slide3:checked ~ .navigation label[for="slide3"] {
       <div class="notes-o">Fenugreek <i>(Vendhayam/Menthulu/Methi seeds)</i></div>
       <div class="notes-o">Asafoetida <i>(Perungayam/Inguva/Hing)</i></div>
       <div class="notes-o">And much more......</div>
-
-      <h3>Customized spice powders</h3>
-      <div class="notes-o">Chilli Powder</div>
-      <div class="notes-o">Turmeric Powder</div>
-      <div class="notes-o">Coriander Powder</div>
-      <div class="notes-o">Pepper Powder</div>
-      <div class="notes-o">Garam Masala</div>
-    </div>
-  </section>
-  <section class="catalogue">
-    <div class="catalogue-grid">
-      <div class="catalogue-center-noborder">
-        <div class="section-title">OUR COLLECTIONS</div>
-        <h3>WHOLE SPICES</h3>
-        <p>
-          Cardamom, Black Peppercorns, Cinnamon sticks, Cloves,
-          Star Anise, Mace, Bay leaf, Red Chilli, Turmeric roots,
-          Cumin seeds, Coriander seeds and more.
-        </p>
-
-        <h3>BEYOND SPICES</h3>
-        <p>
-          Ready-to-use spice mixes, premium rice and nuts crafted
-          for authentic flavour and freshness.
-        </p>
-      </div>
-      <div class="catalogue-right">
-        <h2>WHY US?</h2>
-
-        <div class="feature">
-          <strong>Uncompromising Quality</strong>
-          Grade-1 export quality spices with 100% freshness.
-        </div>
-
-        <div class="feature">
-          <strong>Zero Adulteration</strong>
-          No artificial additives, sourced directly.
-        </div>
-
-        <div class="feature">
-          <strong>Customizable</strong>
-          Tailored quantities and grinding.
-        </div>
-
-        <div class="feature">
-          <strong>Value for Money</strong>
-          Premium quality at wholesale prices.
-        </div>
-
-        <div class="feature">
-          <strong>Feel and Buy</strong>
-          Free samples and recipe guidance.
-        </div>
-      </div>
     </div>
   </section>
   <section class="footer">
