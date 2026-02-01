@@ -428,19 +428,54 @@ input#slide3:checked ~ .navigation label[for="slide3"] {
 
   /* ===== RESPONSIVE ===== */
   @media (max-width: 900px) {
-    .grid {
+    .grid,
+    .header,
+    .catalogue-grid,
+    .footer {
       grid-template-columns: 1fr;
     }
+
+    .grid {
+      gap: 0px;
+      row-gap: 20px;
+    }
+    
     .header,
+    .catalogue-grid,
+    .footer {
+      gap: 0px;
+    }
+
+    .contact {
+      text-align: left;
+    }
+    
+    /*.tag,
+    .catalogue-grid {
+      grid-column: 1;
+    }*/
+    .logo,
+    .tag,
     .spices,
     .catalogue,
+    .catalogue-left,
+    .catalogue-center,
+    .catalogue-right,
+    .catalogue-center-noborder,
+    .catalogue-left-noborder,
     .center,
     .left,
     .right,
-    .footer,
+    .address,
     .contact {
-      grid-column: span 1;
+      grid-column: 1/-1;
       /*text-align: center;*/
+    }
+
+    .catalogue-left,
+    .catalogue-center {
+      border-right: none;
+      padding-right: 0;
     }
 
     .center {
