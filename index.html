@@ -16,7 +16,7 @@
     /*--bg-brown: #fdf0e6;*/
     --brown: #4b2412;
     --grey: #3E3B3C;
-    --catalog-grey: #E2DDD3;
+    --catalog-grey: #b0afac;
     --spice-powder: #edddbc;
     --card: #ffffff;
   }
@@ -32,6 +32,10 @@
     background: var(--bg);
     color: var(--grey);
   }
+
+  /*div {
+    display: grid;
+  }*/
 
   /* ===== GRID CONTAINER ===== */
   .grid {
@@ -160,7 +164,7 @@
     text-align: center;
     font-size: 25px;
     padding-bottom: 12px;
-    display: inline-block;
+    /*display: inline-block;
     /*margin-bottom: 15px;*/
     grid-column: span 4;
   }
@@ -225,6 +229,7 @@
 
   .spice-powder img {
     width: 100%;
+    height: 100%;
   }
 
   .spice-powder-col2 {
@@ -298,12 +303,7 @@
     display: inline-block;
     margin-bottom: 15px;
   }
-
   
-
-  
-
-
   /* ===== CENTER BRAND (COLUMN 2) ===== */
   .center {
     grid-column: 2;
@@ -336,7 +336,7 @@
   }
 
   .product strong {
-    display: block;
+    /*display: block;*/
     text-transform: uppercase;
     color: var(--accent);
   }
@@ -350,7 +350,8 @@
     font-weight: bold;
     font-size: x-small;
     color: var(--accent);
-    margin-top: 7px;
+    margin-top: 5px;
+    margin-bottom: 10px;
     text-transform: uppercase;
   }
 
@@ -358,7 +359,7 @@
     font-style: italic;
     font-size: medium;
     color: var(--accent);
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     margin-top: 5px;
   }
 
@@ -484,28 +485,78 @@
     .tag { text-align: left; }
   }
 
-  @media (max-width: 700px) {
-    .grid, .catalogue-grid, .spice-powder-grid, .others-grid, .footer {
-      grid-template-columns: 1fr;
-    }
+  /* ===================== */
+/* MOBILE (≤700px) */
+/* ===================== */
+@media (max-width: 700px) {
 
-    .overlay-text {
-      font-size: clamp(12px, 4vw, 18px);
-      bottom: 15%;
-      left: 50%;
-      transform: translateX(-50%);
-      padding: 8px 10px;
-    }
+.grid,
+.header,
+.catalogue-grid,
+.spice-powder-grid,
+.others-grid,
+.footer {
+  grid-template-columns: 1fr;
+  gap: 10px 0px;
+}
 
-    .spice-powder-col2, .others-col2 {
-      padding: 15px;
-    }
+/* Reset ALL forced grid placement */
+*[class*="col"],
+.logo,
+.tag,
+.spices,
+.catalogue,
+.spice-powder,
+.others,
+.address,
+.contact {
+  grid-column: 1 / -1;
+}
 
-    .catalogue-col1, .catalogue-col2, .catalogue-col3, .catalogue-col4 {
-      max-width: 90%;
-      margin: auto;
-    }
-  }
+.tag {
+  text-align: left;
+}
+
+.tag h1 {
+  margin-top: 20px;
+  font-size: 26px;
+}
+
+.carousel,
+.slide img {
+  height: 300px;
+}
+
+.overlay-text {
+  font-size: 14px;
+  bottom: 10%;
+  width: 90%;
+  padding: 8px;
+}
+
+.catalogue img {
+  width: 100%;
+  height: auto;
+}
+
+.spice-powder-col2,
+.others-col2 {
+  padding: 20px;
+}
+
+.footer {
+  text-align: left;
+}
+
+.contact {
+  text-align: left;
+}
+
+.spices {
+  height: auto;
+}
+}
+
 </style>
 </head>
 <body>
@@ -542,67 +593,67 @@
     <div class="catalogue-grid">
       <div class="catalogue-title">OUR COLLECTIONS</div>
       <div class="catalogue-col1">
-        <img src="cardamom.jpg">
+        <div><img src="cardamom.jpg"></div>
         <div class="product">
           <strong>Cardamom</strong><div class="lang">(Elakkai/Yelakalu/Elaichi)</div>
-          <div class="notes">Known as the “Queen of Spices”, bold, fragrant and rich in essential oils.</div>
           <div class="source">Sourced: Kerala</div>
+          <div class="notes">Known as the “Queen of Spices”, bold, fragrant and rich in essential oils.</div>
         </div>
       </div>
       <div class="catalogue-col2">
         <img src="anis.jpg">
         <div class="product">
           <strong>Star Anise</strong><div class="lang">(Chakra phool)</div>
-          <div class="notes">Sweet licorice-like aroma adding depth to savory and sweet dishes.</div>
           <div class="source">Sourced: Kerala</div>
+          <div class="notes">Sweet licorice-like aroma adding depth to savory and sweet dishes.</div>
         </div>
       </div>
       <div class="catalogue-col3">
         <img src="cinnamon.jpg">
         <div class="product">
           <strong>Cinnamon</strong><div class="lang">(Pattai/Dalchini)</div>
-          <div class="notes">Rich, woody flavour enhancing desserts and savory dishes.</div>
           <div class="source">Sourced: Kerala</div>
+          <div class="notes">Rich, woody flavour enhancing desserts and savory dishes.</div>
         </div>
       </div>
       <div class="catalogue-col4">
         <img src="clove.jpg">
         <div class="product">
           <strong>Clove</strong><div class="lang">(Krambu/Lavangam/Laung)</div>
-          <div class="notes">High eugenol content gives strong aroma and medicinal value.</div>
           <div class="source">Sourced: Kerala / Kanniyakumari</div>
+          <div class="notes">High eugenol content gives strong aroma and medicinal value.</div>
         </div>
       </div>
       <div class="catalogue-col1">
         <img src="bayleaf.jpg">
         <div class="product">
           <strong>Bay Leaf</strong><div class="lang">(Brinji Ilai/Tej Patta)</div>
-          <div class="notes">Subtle herbal depth for curries, soups and rice dishes.</div>
           <div class="source">Sourced: Meghalaya, West Bengal</div>
+          <div class="notes">Subtle herbal depth for curries, soups and rice dishes.</div>
         </div>
       </div>
       <div class="catalogue-col2">
         <img src="mace.jpg">
         <div class="product">
           <strong>Mace Flower</strong><div class="lang">(Japatri/Javitri)</div>
-          <div class="notes">Delicate aromatic covering of nutmeg with warm, spicy notes.</div>
           <div class="source">Sourced: Nilgiris, Kerala</div>
+          <div class="notes">Delicate aromatic covering of nutmeg with warm, spicy notes.</div>
         </div>
       </div>
       <div class="catalogue-col3">
         <img src="pepper.jpg">
         <div class="product">
           <strong>Black Pepper</strong><div class="lang">(Milagu/Miriyalu/Kali Mirch)</div>
-          <div class="notes">Extra sharp aroma and intense heat for taste and nutrition.</div>
           <div class="source">Sourced: Kerala</div>
+          <div class="notes">Extra sharp aroma and intense heat for taste and nutrition.</div>
         </div>
       </div>
       <div class="catalogue-col4">
         <img src="dhaniya.jpg">
         <div class="product">
           <strong>Coriander Seeds</strong><div class="lang">(Malli/Sabut Dhaniya)</div>
-          <div class="notes">Mildly sweet, citrusy backbone of Indian cooking.</div>
           <div class="source">Sourced: Virudhunagar, Thoothukudi</div>
+          <div class="notes">Mildly sweet, citrusy backbone of Indian cooking.</div>
         </div>
       </div>
     </div>
@@ -630,32 +681,32 @@
         <img src="turmeric.jpg">
         <div class="product">
           <strong>Turmeric</strong><div class="lang">(Manjal/Pasupu/Haldi)</div>
-          <div class="notes">Sun-dried and stone-ground to preserve curcumin content.</div>
           <div class="source">Sourced: Telangana, Erode</div>
+          <div class="notes">Sun-dried and stone-ground to preserve curcumin content.</div>
         </div>
       </div>
       <div class="catalogue-col2">
         <img src="redchilly.jpg">
         <div class="product">
           <strong>Red Chilli</strong><div class="lang">(Varamilagai/Endu Mirchi/Lal Mirch)</div>
-          <div class="notes">Vibrant colour and balanced heat without additives.</div>
           <div class="source">Sourced: Guntur</div>
+          <div class="notes">Vibrant colour and balanced heat without additives.</div>
         </div>
       </div>
       <div class="catalogue-col3">
         <img src="garlic.jpg">
         <div class="product">
           <strong>Garlic</strong><div class="lang">(Poondu/Velluli/Lehsun)</div>
-          <div class="notes">Strong savory flavour with medicinal benefits.</div>
           <div class="source">Sourced: Kodaikanal</div>
+          <div class="notes">Strong savory flavour with medicinal benefits.</div>
         </div>
       </div>
       <div class="catalogue-col4">
         <img src="tamarind.jpg">
         <div class="product">
           <strong>Tamarind</strong><div class="lang">(Puli/Chinthapandu/Imli)</div>
-          <div class="notes">Deep sourness with natural sweetness, aids digestion.</div>
           <div class="source">Sourced: Dharmapuri, Tamil Nadu</div>
+          <div class="notes">Deep sourness with natural sweetness, aids digestion.</div>
         </div>
       </div>
     </div>
