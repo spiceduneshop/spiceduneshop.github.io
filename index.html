@@ -53,7 +53,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: auto;
-    gap: 50px;
+    /*gap: 50px;*/
   }
 
   .logo {
@@ -484,7 +484,7 @@
 /* ===================== */
 @media (max-width: 700px) {
 
-.grid,
+/*.grid,*/
 .header,
 .spice-powder-grid,
 .others-grid,
@@ -493,28 +493,39 @@
   gap: 10px 0px;
 }
 
+.grid {
+  grid-template-columns: 1fr;
+  gap: 15px;
+  padding: 0 10px;
+}
+
 .catalogue-grid {
-  /*display: grid;*/
   grid-template-columns: repeat(2,1fr);
-  column-gap: 10px;
-  row-gap: 15px;
+  gap: 10px;
+  width: 100%;                            /* fill container */
+  max-width: 100%;                        /* prevent overflow */
+  margin: 0;                                  
+  padding: 0;                             
+  box-sizing: border-box;
 }
 
 /* Reset ALL forced grid placement */
+.header,
 .logo,
 .tag,
 .spices,
 .catalogue,
 .spice-powder,
 .others,
+.footer,
 .address,
 .contact {
   grid-column: 1 / -1;
 }
 
-/*.catalogue {
-  grid-column: 1 / 3;
-}*/
+.catalogue-grid > .catalogue-item {
+    width: 100%;     /* ensure items stay inside grid */
+  }
 
 .tag {
   text-align: left;
@@ -537,10 +548,10 @@
   padding: 8px;
 }
 
-.catalogue img {
+/*.catalogue img {
   width: 100%;
   height: auto;
-}
+}*/
 
 .spice-powder-col2,
 .others-col2 {
@@ -558,6 +569,10 @@
 .spices {
   height: auto;
 }
+
+/*body, .grid {
+  overflow-x: hidden;
+}*/
 }
 
 </style>
