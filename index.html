@@ -812,7 +812,7 @@
   const totalSlides = dots.length;
   let index = 0;
   let interval;
-  let order;
+  let order = "Here is your order: ";
 
   function showSlide(i) {
     slides.style.transform = `translateX(-${i * 100}%)`;
@@ -860,6 +860,7 @@
       button.textContent = item.textContent;
       dropdown.classList.remove('open');
       order += item.dataset.value + ',';
+      console.log(order)
     });
   });
 
@@ -867,6 +868,7 @@
     document.getElementById('whatsapp').addEventListener('click', function () {
       this.href = `https://wa.me/919677334544?text=${order}`;
     });
+    document.getElementById("whatsapp").click();
   });
 
   // Close dropdown if clicking outside
