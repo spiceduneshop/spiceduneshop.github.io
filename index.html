@@ -380,6 +380,47 @@
     color: #F6EBCF;
   }
 
+  .dropdown {
+  position: relative;
+  width: 200px;
+  font-family: Arial, sans-serif;
+}
+
+.dropdown-btn {
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.dropdown-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #fff;
+  display: none;
+  z-index: 1000;
+}
+
+.dropdown-menu li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+  background: #f0f0f0;
+}
+
+.dropdown.open .dropdown-menu {
+  display: block;
+}
+
+
   
     @media (max-width: 1024px) {
     .catalogue-grid {
@@ -581,6 +622,15 @@
           <strong>Cardamom</strong>
           <div class="lang">(Elakkai/Yelakalu/Elaichi)</div>
           <div class="source">Sourced: Kerala</div>
+          <div class="dropdown">
+            <button class="dropdown-btn">Select an option ⌄</button>
+            <ul class="dropdown-menu">
+              <li data-value="cardamom-25">25 gms</li>
+              <li data-value="cardamom-50">50 gms</li>
+              <li data-value="cardamom-100">100 gms</li>
+            </ul>
+          </div>
+          
           <!--<div class="notes">Known as the “Queen of Spices”, bold, fragrant and rich in essential oils.</div>-->
         </div>
       </div>
@@ -752,15 +802,17 @@
     <div class="footer">
       <div class="address"><div class="footer-section-title">WHERE ?</div><div>📍 G10B, Ground Floor, <br>Ozone Greens, <br>Perumbakkam, <br>Chennai-100</div></div>
       <div class="footer-gap"></div>
-      <div class="contact"><div class="footer-section-title">HOW ?</div><div><a href="https://wa.me/919677334544?text=Hello%20I%20would%20like%20more%20information%20">WHATSAPP</a> <br>or <br> 📞 9677334544<br>Email spiceduneshop@gmail.com</div></div>
+      <div class="contact"><div class="footer-section-title">HOW ?</div><div class="whatsapp"><a href="#" id="whatsapp">WHATSAPP</a> <br>or <br> 📞 9677334544<br>Email spiceduneshop@gmail.com</div></div>
     </div>
   </div>
 <script>
   const slides = document.querySelector('.slides');
   const dots = document.querySelectorAll('.dot');
+  const whatsapp = document.querySelector('.whatsapp');
   const totalSlides = dots.length;
   let index = 0;
   let interval;
+  let order;
 
   function showSlide(i) {
     slides.style.transform = `translateX(-${i * 100}%)`;
@@ -793,6 +845,35 @@
     dot.addEventListener('click', () => {
       showSlide(i);
     });
+  });
+
+  const dropdown = document.querySelector('.dropdown');
+  const button = dropdown.querySelector('.dropdown-btn');
+  const items = dropdown.querySelectorAll('.dropdown-menu li');
+
+  button.addEventListener('click', () => {
+    dropdown.classList.toggle('open');
+  });
+
+  items.forEach(item => {
+    item.addEventListener('click', () => {
+      button.textContent = item.textContent;
+      dropdown.classList.remove('open');
+      order += item.dataset.value + ',';
+    });
+  });
+
+  whatsapp.addEventListener('click', (e) => {
+    document.getElementById('whatsapp').addEventListener('click', function () {
+      this.href = `https://wa.me/919677334544?text=${order}`;
+    });
+  });
+
+  // Close dropdown if clicking outside
+  document.addEventListener('click', (e) => {
+    if (!dropdown.contains(e.target)) {
+      dropdown.classList.remove('open');
+    }
   });
 </script>
 </body>
