@@ -812,69 +812,11 @@
     });
   });
 
-  document.addEventListener("click", function (e) {
-    const button = e.target.closest(".dropdown-btn");
-    const item = e.target.closest(".dropdown-menu li");
-
-    // Close all dropdowns
-    document.querySelectorAll(".dropdown").forEach(d => {
-      if (!d.contains(e.target)) d.classList.remove("open");
-    });
-
-    // Toggle dropdown
-    if (button) {
-      const dropdown = button.closest(".dropdown");
-      dropdown.classList.toggle("open");
-    }
-
-    // Select item
-    if (item) {
-      const dropdown = item.closest(".dropdown");
-      const btn = dropdown.querySelector(".dropdown-btn");
-
-      btn.textContent = item.textContent;
-      dropdown.classList.remove("open");
-
-      //order += item.dataset.value + ',';
-    }
-  });
-
   whatsapp.addEventListener('click', (e) => {
-    const data = {};
-    this.querySelectorAll(".qty-input").forEach(input => {
-      data[input.name] = input.value;
-    });
-
-    console.log(data);
-
     document.getElementById('whatsapp').addEventListener('click', function () {
-      this.href = `https://wa.me/919677334544?text=${order}`;
+      this.href = `https://wa.me/919677334544?text=Hello`;
     });
     document.getElementById("whatsapp").click();
-  });
-
-  document.addEventListener("click", function (e) {
-    const btn = e.target.closest(".qty-btn");
-    if (!btn) return;
-
-    const control = btn.closest(".qty-control");
-    const input = control.querySelector(".qty-input");
-
-    const min = input.min ? parseInt(input.min) : 0;
-    const max = input.max ? parseInt(input.max) : Infinity;
-    let value = parseInt(input.value) || min;
-
-    if (btn.classList.contains("plus") && value < max) {
-      value++;
-    }
-
-    if (btn.classList.contains("minus") && value > min) {
-      value--;
-    }
-
-    input.value = value;
-    input.dispatchEvent(new Event("change"));
-    console.log(value);
   });
 
 </script>
