@@ -266,6 +266,7 @@
 
   .others-col1 {
     width: 50%;
+    height: 100%;
   }
 
   .others img {
@@ -380,95 +381,6 @@
     color: #F6EBCF;
   }
 
-  .order-info {
-    display: flex;
-  }
-
-  .dropdown {
-  position: relative;
-  width: 50%;
-  font-family: Arial, sans-serif;
-}
-
-.dropdown-btn {
-  width: 100%;
-  padding: 10px;
-  cursor: pointer;
-  background: #544b35;
-  /*border: 1px solid #ccc;*/
-  color: #F6EBCF;
-  text-align: left;
-}
-
-.dropdown-menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  position: absolute;
-  width: 100%;
-  border: 1px solid #ccc;
-  background: #fff;
-  display: none;
-  z-index: 1000;
-}
-
-.dropdown-menu li {
-  padding: 10px;
-  cursor: pointer;
-}
-
-.dropdown-menu li:hover {
-  background: #f0f0f0;
-}
-
-.dropdown.open .dropdown-menu {
-  display: block;
-}
-
-.qty-control {
-  /*display: inline-flex;*/
-  align-items: center;
-  border: 1px solid #544b35;
-  width: 50%;
-  font-family: Arial, sans-serif;
-}
-
-.qty-btn {
-  width: 25%;
-  height: 100%;
-  border: none;
-  background: #ffffff;
-  cursor: pointer;
-  font-size: 18px;
-  color: #544b35;
-}
-
-.qty-btn:hover {
-  background: #F6EBCF;
-}
-
-.qty-input {
-  width: 42%;
-  text-align: center;
-  border: none;
-  outline: none;
-  font-size: 16px;
-  color: #544b35;
-}
-
-/* Remove arrows in number input */
-.qty-input::-webkit-inner-spin-button,
-.qty-input::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.qty-input {
-  -moz-appearance: textfield;
-}
-
-
-  
     @media (max-width: 1024px) {
     .catalogue-grid {
       grid-template-columns: repeat(4, 1fr);
@@ -582,6 +494,14 @@
   padding: 20px;
 }
 
+.others-group, .others {
+  height: 100%;
+}
+
+.others-col1 {
+  height: 50%;
+}
+
 .others-col2 {
   height: auto;
   width: 100%;
@@ -669,21 +589,6 @@
           <strong>Cardamom</strong>
           <div class="lang">(Elakkai/Yelakalu/Elaichi)</div>
           <div class="source">Sourced: Kerala</div>
-          <div class="order-info">
-            <div class="dropdown">
-              <button class="dropdown-btn">Select an option</button>
-              <ul class="dropdown-menu">
-                <li data-value="cardamom-25">25 gms</li>
-                <li data-value="cardamom-50">50 gms</li>
-                <li data-value="cardamom-100">100 gms</li>
-              </ul>
-            </div>
-            <div class="qty-control">
-              <button class="qty-btn minus" type="button">−</button>
-              <input type="number" class="qty-input" value="1" min="1">
-              <button class="qty-btn plus" type="button">+</button>
-            </div>
-          </div>
           <!--<div class="notes">Known as the “Queen of Spices”, bold, fragrant and rich in essential oils.</div>-->
         </div>
       </div>
@@ -695,21 +600,6 @@
           <strong>Star Anise</strong>
           <div class="lang">(Chakra phool)</div>
           <div class="source">Sourced: Kerala</div>
-          <div class="order-info">
-            <div class="dropdown">
-              <button class="dropdown-btn">Select an option</button>
-              <ul class="dropdown-menu">
-                <li data-value="anis-25">25 gms</li>
-                <li data-value="anis-50">50 gms</li>
-                <li data-value="anis-100">100 gms</li>
-              </ul>
-            </div>
-            <div class="qty-control">
-              <button class="qty-btn minus" type="button">−</button>
-              <input type="number" class="qty-input" value="1" min="1">
-              <button class="qty-btn plus" type="button">+</button>
-            </div>
-          </div>
           <!--<div class="notes">Sweet licorice-like aroma adding depth to savory and sweet dishes.</div>-->
         </div>
       </div>
@@ -721,21 +611,6 @@
           <strong>Cinnamon</strong>
           <div class="lang">(Pattai/Dalchini)</div>
           <div class="source">Sourced: Kerala</div>
-          <div class="order-info">
-            <div class="dropdown">
-              <button class="dropdown-btn">Select an option</button>
-              <ul class="dropdown-menu">
-                <li data-value="cinnamon-25">25 gms</li>
-                <li data-value="cinnamon-50">50 gms</li>
-                <li data-value="cinnamon-100">100 gms</li>
-              </ul>
-            </div>
-            <div class="qty-control">
-              <button class="qty-btn minus" type="button">−</button>
-              <input type="number" class="qty-input" value="1" min="1">
-              <button class="qty-btn plus" type="button">+</button>
-            </div>
-          </div>
           <!--<div class="notes">Rich, woody flavour enhancing desserts and savory dishes.</div>-->
         </div>
       </div>
@@ -747,21 +622,6 @@
           <strong>Clove</strong>
           <div class="lang">(Krambu/Lavangam/Laung)</div>
           <div class="source">Sourced: Kerala / Kanniyakumari</div>
-          <div class="order-info">
-            <div class="dropdown">
-              <button class="dropdown-btn">Select an option</button>
-              <ul class="dropdown-menu">
-                <li data-value="clove-25">25 gms</li>
-                <li data-value="clove-50">50 gms</li>
-                <li data-value="clove-100">100 gms</li>
-              </ul>
-            </div>
-            <div class="qty-control">
-              <button class="qty-btn minus" type="button">−</button>
-              <input type="number" class="qty-input" value="1" min="1">
-              <button class="qty-btn plus" type="button">+</button>
-            </div>
-          </div>
           <!--<div class="notes">High eugenol content gives strong aroma and medicinal value.</div>-->
         </div>
       </div>
@@ -773,21 +633,6 @@
           <strong>Bay Leaf</strong>
           <div class="lang">(Brinji Ilai/Tej Patta)</div>
           <div class="source">Sourced: Meghalaya, West Bengal</div>
-          <div class="order-info">
-            <div class="dropdown">
-              <button class="dropdown-btn">Select an option</button>
-              <ul class="dropdown-menu">
-                <li data-value="bayleaf-25">25 gms</li>
-                <li data-value="bayleaf-50">50 gms</li>
-                <li data-value="bayleaf-100">100 gms</li>
-              </ul>
-            </div>
-            <div class="qty-control">
-              <button class="qty-btn minus" type="button">−</button>
-              <input type="number" class="qty-input" value="1" min="1">
-              <button class="qty-btn plus" type="button">+</button>
-            </div>
-          </div>
           <!--<div class="notes">Subtle herbal depth for curries, soups and rice dishes.</div>-->
         </div>
       </div>
@@ -799,21 +644,6 @@
           <strong>Mace Flower</strong>
           <div class="lang">(Japatri/Javitri)</div>
           <div class="source">Sourced: Nilgiris, Kerala</div>
-          <div class="order-info">
-            <div class="dropdown">
-              <button class="dropdown-btn">Select an option</button>
-              <ul class="dropdown-menu">
-                <li data-value="mace-25">25 gms</li>
-                <li data-value="mace-50">50 gms</li>
-                <li data-value="mace-100">100 gms</li>
-              </ul>
-            </div>
-            <div class="qty-control">
-              <button class="qty-btn minus" type="button">−</button>
-              <input type="number" class="qty-input" value="1" min="1">
-              <button class="qty-btn plus" type="button">+</button>
-            </div>
-          </div>
           <!--<div class="notes">Delicate aromatic covering of nutmeg with warm, spicy notes.</div>-->
         </div>
       </div>
@@ -825,21 +655,6 @@
           <strong>Black Pepper</strong>
           <div class="lang">(Milagu/Miriyalu/Kali Mirch)</div>
           <div class="source">Sourced: Kerala</div>
-          <div class="order-info">
-            <div class="dropdown">
-              <button class="dropdown-btn">Select an option</button>
-              <ul class="dropdown-menu">
-                <li data-value="pepper-25">25 gms</li>
-                <li data-value="pepper-50">50 gms</li>
-                <li data-value="pepper-100">100 gms</li>
-              </ul>
-            </div>
-            <div class="qty-control">
-              <button class="qty-btn minus" type="button">−</button>
-              <input type="number" class="qty-input" value="1" min="1">
-              <button class="qty-btn plus" type="button">+</button>
-            </div>
-          </div>
           <!--<div class="notes">Extra sharp aroma and intense heat for taste and nutrition.</div>-->
         </div>
       </div>
@@ -851,21 +666,6 @@
           <strong>Coriander Seeds</strong>
           <div class="lang">(Malli/Sabut Dhaniya)</div>
           <div class="source">Sourced: Virudhunagar, Thoothukudi</div>
-          <div class="order-info">
-            <div class="dropdown">
-              <button class="dropdown-btn">Select an option</button>
-              <ul class="dropdown-menu">
-                <li data-value="dhaniya-25">25 gms</li>
-                <li data-value="dhaniya-50">50 gms</li>
-                <li data-value="dhaniya-100">100 gms</li>
-              </ul>
-            </div>
-            <div class="qty-control">
-              <button class="qty-btn minus" type="button">−</button>
-              <input type="number" class="qty-input" value="1" min="1">
-              <button class="qty-btn plus" type="button">+</button>
-            </div>
-          </div>
           <!--<div class="notes">Mildly sweet, citrusy backbone of Indian cooking.</div>-->
         </div>
       </div>
@@ -898,21 +698,6 @@
           <strong>Turmeric</strong>
           <div class="lang">(Manjal/Pasupu/Haldi)</div>
           <div class="source">Sourced: Telangana, Erode</div>
-          <div class="order-info">
-            <div class="dropdown">
-              <button class="dropdown-btn">Select an option</button>
-              <ul class="dropdown-menu">
-                <li data-value="turmeric-25">25 gms</li>
-                <li data-value="turmeric-50">50 gms</li>
-                <li data-value="turmeric-100">100 gms</li>
-              </ul>
-            </div>
-            <div class="qty-control">
-              <button class="qty-btn minus" type="button">−</button>
-              <input type="number" class="qty-input" value="1" min="1">
-              <button class="qty-btn plus" type="button">+</button>
-            </div>
-          </div>
           <!--<div class="notes">Sun-dried and stone-ground to preserve curcumin content.</div>-->
         </div>
       </div>
@@ -923,22 +708,7 @@
         <div class="product">
           <strong>Red Chilli</strong>
           <div class="lang">(Varamilagai/Endu Mirchi/Lal Mirch)</div>
-          <div class="source">Sourced: Guntur</div>
-          <div class="order-info">
-            <div class="dropdown">
-              <button class="dropdown-btn">Select an option</button>
-              <ul class="dropdown-menu">
-                <li data-value="redchilly-25">25 gms</li>
-                <li data-value="redchilly-50">50 gms</li>
-                <li data-value="redchilly-100">100 gms</li>
-              </ul>
-            </div>
-            <div class="qty-control">
-              <button class="qty-btn minus" type="button">−</button>
-              <input type="number" class="qty-input" value="1" min="1">
-              <button class="qty-btn plus" type="button">+</button>
-            </div>
-          </div>  
+          <div class="source">Sourced: Guntur</div> 
           <!--<div class="notes">Vibrant colour and balanced heat without additives.</div>-->
         </div>
       </div>
@@ -950,21 +720,6 @@
           <strong>Garlic</strong>
           <div class="lang">(Poondu/Velluli/Lehsun)</div>
           <div class="source">Sourced: Kodaikanal</div>
-          <div class="order-info">
-            <div class="dropdown">
-              <button class="dropdown-btn">Select an option</button>
-              <ul class="dropdown-menu">
-                <li data-value="garlic-25">25 gms</li>
-                <li data-value="garlic-50">50 gms</li>
-                <li data-value="garlic-100">100 gms</li>
-              </ul>
-            </div>
-            <div class="qty-control">
-              <button class="qty-btn minus" type="button">−</button>
-              <input type="number" class="qty-input" value="1" min="1">
-              <button class="qty-btn plus" type="button">+</button>
-            </div>
-          </div>
           <!--<div class="notes">Strong savory flavour with medicinal benefits.</div>-->
         </div>
       </div>
@@ -976,21 +731,6 @@
           <strong>Tamarind</strong>
           <div class="lang">(Puli/Chinthapandu/Imli)</div>
           <div class="source">Sourced: Dharmapuri, Tamil Nadu</div>
-          <div class="order-info">
-            <div class="dropdown">
-              <button class="dropdown-btn">Select an option</button>
-              <ul class="dropdown-menu">
-                <li data-value="cinnamon-25">25 gms</li>
-                <li data-value="cinnamon-50">50 gms</li>
-                <li data-value="cinnamon-100">100 gms</li>
-              </ul>
-            </div>
-            <div class="qty-control">
-              <button class="qty-btn minus" type="button">−</button>
-              <input type="number" class="qty-input" value="1" min="1">
-              <button class="qty-btn plus" type="button">+</button>
-            </div>
-          </div>
           <!--<div class="notes">Deep sourness with natural sweetness, aids digestion.</div>-->
         </div>
       </div>
